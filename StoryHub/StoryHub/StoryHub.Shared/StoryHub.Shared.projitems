@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>3fc10ae3-3475-4352-8ea9-9aa0e5584289</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>StoryHub</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\RegistrationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\RoleKeeper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\ServiceMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\ArrayToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\VisibilityConvertor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Connector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\SampleDataCreator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\Story.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\Author.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\Enums.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\Restriction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\Storyline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Model\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Parser\Parser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Parser\ParserXML.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)testclass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)strings\cs-CZ\" />
+    <Folder Include="$(MSBuildThisFileDirectory)strings\en-US\" />
+  </ItemGroup>
+</Project>

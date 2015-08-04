@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="StoryHub.ForgottenPsw"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoryHub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    	<Grid.RowDefinitions>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    		<RowDefinition/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition/>
+    		<ColumnDefinition Width="5*"/>
+    		<ColumnDefinition/>
+    		<ColumnDefinition Width="9*"/>
+    		<ColumnDefinition/>
+    	</Grid.ColumnDefinitions>
+    	<Grid x:Name="GridLogin" Grid.Column="1" Margin="0" Grid.Row="1" Grid.RowSpan="3">
+    		<Grid.RowDefinitions>
+    			<RowDefinition Height="2*"/>
+    			<RowDefinition/>
+    			<RowDefinition Height="2*"/>
+    		</Grid.RowDefinitions>
+    		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Forgotten password" VerticalAlignment="Bottom" Margin="0,0,0,10" FontSize="18.667"/>
+    		<TextBox x:Name="TbPsw" TextWrapping="Wrap" Text="Nickname" VerticalAlignment="Center" Grid.Row="1"/>
+    		<Button x:Name="BtnRecPsw" Content="Reset Password" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="2" Margin="0,10,0,0" Tapped="BtnRecPsw_Tapped"/>
+    	</Grid>
+    	<Grid x:Name="GridPsw" Grid.Column="1" Grid.RowSpan="3" Grid.Row="5">
+    		<Grid.RowDefinitions>
+    			<RowDefinition Height="2*"/>
+    			<RowDefinition/>
+    			<RowDefinition Height="2*"/>
+    		</Grid.RowDefinitions>
+    		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Forgotten nick" VerticalAlignment="Bottom" Margin="0,0,0,10" FontSize="18.667"/>
+    		<TextBox x:Name="TbEmail" TextWrapping="Wrap" Text="E-mail address" VerticalAlignment="Center" Grid.Row="1"/>
+    		<Button x:Name="BtnRecLogin" Content="Recover login" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="2" Margin="0,10,0,0" Tapped="BtnRecLogin_Tapped"/>
+    	</Grid>
+    	<Grid x:Name="GridDesc" Grid.RowSpan="9" Grid.Row="1" Grid.Column="3">
+    		<Grid.RowDefinitions>
+    			<RowDefinition/>
+    			<RowDefinition Height="8*"/>
+    		</Grid.RowDefinitions>
+    		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Recover your account" VerticalAlignment="Center" FontSize="32"/>
+    		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Have you forgotten your password? Nickname? Both? Never mind! Our megamind will help your with recovery of your acounts. Just give us a clue. If you forgot your password, enter nickname please. If you forgot nickname or both nickname and password, enter your e-mail address, which you used to register." VerticalAlignment="Top" Grid.Row="1" FontSize="18.667"/>
+    	</Grid>
+    	<AppBarButton x:Name="BtnBack" HorizontalAlignment="Right" Label="AppBarButton" VerticalAlignment="Center" Grid.Row="9" Grid.Column="3" Icon="Back" Tapped="BtnBack_Tapped"/>
+
+    </Grid>
+</Page>
