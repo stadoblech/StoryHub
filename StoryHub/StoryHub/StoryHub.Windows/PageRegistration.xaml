@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="StoryHub.PageRegistration"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StoryHub"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="15*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" Grid.Column="1" HorizontalAlignment="Left" Margin="44,35,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Registration" VerticalAlignment="Top" FontSize="32"/>
+        <TextBlock x:Name="textBlock1" Grid.Column="1" HorizontalAlignment="Left" Margin="128,110,0,0" Grid.Row="1" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontSize="14.667"/>
+        <TextBlock x:Name="textBlock2" Grid.Column="1" HorizontalAlignment="Left" Margin="108,147,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" FontSize="14.667"/>
+        <TextBlock x:Name="textBlock3" Grid.Column="1" HorizontalAlignment="Left" Margin="69,184,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password again:" VerticalAlignment="Top" FontSize="14.667"/>
+        <CheckBox x:Name="checkBox" Content="Do you want to recive newsletter?" Grid.Column="1" HorizontalAlignment="Left" Margin="179,232,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox1" Content="Do you agree with terms of use?" Grid.Column="1" HorizontalAlignment="Left" Margin="179,270,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Margin="182,103,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <TextBox x:Name="textBox1" Grid.Column="1" HorizontalAlignment="Left" Margin="182,140,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <TextBox x:Name="textBox2" Grid.Column="1" HorizontalAlignment="Left" Margin="182,177,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187"/>
+        <Button x:Name="button" Content="Cancel" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,42,24" Grid.Row="1" VerticalAlignment="Bottom"/>
+        <Button x:Name="button1" Content="Save" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,141,24" Grid.Row="1" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Page>

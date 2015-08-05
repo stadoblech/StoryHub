@@ -7,6 +7,6 @@ namespace StoryHub
     class testclass
     {
 
-        WebService.
+        
     }
 }
