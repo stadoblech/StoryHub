@@ -66,6 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseConnector.cs" />
+    <Compile Include="DataModel\Author.cs" />
+    <Compile Include="DataModel\Enums.cs" />
+    <Compile Include="DataModel\Restriction.cs" />
+    <Compile Include="DataModel\SampleDataCreator.cs" />
+    <Compile Include="DataModel\Story.cs" />
+    <Compile Include="DataModel\Storyline.cs" />
+    <Compile Include="DataModel\User.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="TestStudentService.svc.cs">
       <DependentUpon>TestStudentService.svc</DependentUpon>
