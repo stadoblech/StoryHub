@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -42,8 +43,34 @@ namespace StoryHubWCFApp
 
         public Student GetStudent(string ID)
         {
-            //vytáhnutí studenta z databáze
-            return null;                 
+            
+            return queryForStudent();                 
+        }
+
+        private Student queryForStudent()
+        {
+            DatabaseConnector.Connect();
+            SqlCommand cmd = DatabaseConnector.Connection.CreateCommand();
+            cmd.CommandText = @"SELECT *
+                                    FROM Student
+                                    WHERE Student.ID = 1";
+            SqlDataReader reader = cmd.ExecuteReader();
+            Student student = new Student();
+            while (reader.Read())
+            {
+                student.Id = Convert.ToInt32(reader["ID"]);
+                student.Name = Convert.ToString(reader["name"]);
+                student.Surename = Convert.ToString(reader["surename"]);
+                //student.Iq = Convert.ToInt32(reader["IQ"]);
+                //student.Birthdate = Convert.ToDateTime(reader["BirthDate"]);
+                //int tallness = Convert.ToInt32(reader["tallness"]);
+                //Console.WriteLine("{0} {1} {2}", login, lname, fname);//, tallness);
+
+            }
+            reader.Close();
+
+            DatabaseConnector.Disconnect();
+            return student;
         }
     }
 }
