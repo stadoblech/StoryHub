@@ -8,10 +8,9 @@ using System.Text;
 
 namespace StoryHubWCFApp
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
-    public class Service1 : IService1
+    public class TestStudentService : ITestStudentService
     {
+        /*
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
@@ -28,6 +27,23 @@ namespace StoryHubWCFApp
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }*/
+        public Tuple<bool, string> AddStudent(Student student)
+        {
+            //vložení studenta do databáze
+            return new Tuple<bool, string>(false, "Student already exists.");
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            //vytáhnutí studentů z databáze
+            return new List<Student>() { new Student() };
+        }
+
+        public Student GetStudent(string ID)
+        {
+            //vytáhnutí studenta z databáze
+            return null;                 
         }
     }
 }

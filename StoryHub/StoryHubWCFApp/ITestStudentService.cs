@@ -8,21 +8,28 @@ using System.Text;
 
 namespace StoryHubWCFApp
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    /// <summary>
+    /// Definice metod.
+    /// </summary>
     [ServiceContract]
-    public interface IService1
+    public interface ITestStudentService
     {
 
         [OperationContract]
-        string GetData(int value);
+        [WebGet(UriTemplate = "Student/{ID}")]
+        Student GetStudent(string ID);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        [WebGet]
+        List<Student> GetAllStudents();
 
-        // TODO: Add your service operations here
+        [OperationContract]
+        [WebInvoke(UriTemplate = "AddStudent")]
+        Tuple<bool,string> AddStudent(Student student);
+        
     }
 
-
+    /*
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
     public class CompositeType
@@ -43,5 +50,5 @@ namespace StoryHubWCFApp
             get { return stringValue; }
             set { stringValue = value; }
         }
-    }
+    }*/
 }
