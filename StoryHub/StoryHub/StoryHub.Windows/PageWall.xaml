@@ -72,7 +72,7 @@
                 </TextBlock>
                 <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="47,346,0,339" TextWrapping="Wrap" d:LayoutOverrides="Height" Text="přístupno od 15 let"/>
             </Grid>
-            <Grid x:Name="Story" d:IsHidden="True">
+            <Grid x:Name="Story">
                 <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" Margin="10,10,0,0" Text="Chapter I"/>
                 <TextBlock x:Name="textBlock12" HorizontalAlignment="Left" Margin="13,42,0,0" TextWrapping="Wrap" Text="Humble beginnings" VerticalAlignment="Top" FontSize="12"/>
                 <Grid Margin="13,61,10,0" VerticalAlignment="Top" Background="#FF2C2C2C" Height="135" d:LayoutOverrides="LeftPosition, RightPosition"/>
@@ -147,7 +147,7 @@
                 <TextBlock x:Name="textBlock13_Copy5" HorizontalAlignment="Left" Margin="46,189,0,0" TextWrapping="Wrap" Text="Epilogue" VerticalAlignment="Top" FontSize="14.667"/>
             </Grid>
         </Grid>
-        <Grid x:Name="PaperPanel" Grid.Column="3" Margin="0" Grid.Row="1" Grid.ColumnSpan="3" Background="White">
+        <Grid x:Name="PaperPanel" Grid.Column="3" Margin="0" Grid.Row="1" Grid.ColumnSpan="3" Background="White" d:IsHidden="True">
             <TextBlock x:Name="textBlock19" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Foreground="Black">
             	<Run Text="             "/>
             	<Run Text="&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&quot;"/>
