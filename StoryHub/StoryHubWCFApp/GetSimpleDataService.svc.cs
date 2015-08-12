@@ -1,23 +1,35 @@
-﻿using StoryHub.DAL.Model;
-using StoryHubWCFApp;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
 using System.Text;
-using System.Threading.Tasks;
+using StoryHub.DAL.Model;
+using System.Data.SqlClient;
+using System.Data;
 
-namespace QuickTestProject
+namespace StoryHubWCFApp
 {
-    class Program
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "GetSimpleDataService" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select GetSimpleDataService.svc or GetSimpleDataService.svc.cs at the Solution Explorer and start debugging.
+    public class GetSimpleDataService : IGetSimpleDataService
     {
-        static void Main(string[] args)
+        public string ActivationTest()
         {
-            Console.WriteLine(queryForUser("snek@gmail.com").Password);
+            return "Hello WOrld!!!";
         }
 
-        private static User queryForUser(string ID)
+        public User GetUser(string ID)
+        {
+            return queryForUser(ID);
+        }
+
+        public User GetUserByMethod(string ID)
+        {
+            return queryForUser(ID);
+        }
+
+        private User queryForUser(string ID)
         {
             DatabaseConnector.Connect();
             SqlCommand cmd = DatabaseConnector.Connection.CreateCommand();
@@ -44,6 +56,4 @@ namespace QuickTestProject
             return user;
         }
     }
-
-    
 }

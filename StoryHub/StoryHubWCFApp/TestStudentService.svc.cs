@@ -11,24 +11,29 @@ namespace StoryHubWCFApp
 {
     public class TestStudentService : ITestStudentService
     {
-        /*
-        public string GetData(int value)
+        public string ActivationTest()
         {
-            return string.Format("You entered: {0}", value);
+            return "gggg";
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }*/
+        /*
+public string GetData(int value)
+{
+   return string.Format("You entered: {0}", value);
+}
+
+public CompositeType GetDataUsingDataContract(CompositeType composite)
+{
+   if (composite == null)
+   {
+       throw new ArgumentNullException("composite");
+   }
+   if (composite.BoolValue)
+   {
+       composite.StringValue += "Suffix";
+   }
+   return composite;
+}*/
         public Tuple<bool, string> AddStudent(Student student)
         {
             //vložení studenta do databáze

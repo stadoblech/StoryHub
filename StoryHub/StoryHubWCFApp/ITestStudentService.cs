@@ -26,7 +26,11 @@ namespace StoryHubWCFApp
         [OperationContract]
         [WebInvoke(UriTemplate = "AddStudent")]
         Tuple<bool,string> AddStudent(Student student);
-        
+
+        [OperationContract]
+        [WebGet]
+        string ActivationTest();
+
     }
 
     
