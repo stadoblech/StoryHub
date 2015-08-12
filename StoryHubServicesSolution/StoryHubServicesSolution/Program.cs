@@ -10,6 +10,10 @@ namespace StoryHubServicesSolution
     {
         static void Main(string[] args)
         {
+            var a = new TestClass();
+            Console.WriteLine(a.Name + " " + a.Surename);
+            Console.ReadKey();
+
         }
     }
 }
