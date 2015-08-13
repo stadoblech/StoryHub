@@ -29,11 +29,11 @@ public class Service : IService
 		return composite;
 	}
 
-    /*
+    
     public string helloWorld()
     {
         //throw new NotImplementedException();
         return "hello";
     }
-    */
+    
 }
