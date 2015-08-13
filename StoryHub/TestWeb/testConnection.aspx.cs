@@ -4,12 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using TestWeb.localhost;
 
 namespace TestWeb
 {
+
     public partial class testConnection : System.Web.UI.Page
     {
 
+        localhost.Service s = new localhost.Service();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,10 +27,14 @@ namespace TestWeb
             if (!obtainedText.Visible)
             {
                 obtainedText.Visible = true;
-            }else
+            }
+            else
             {
                 obtainedText.Visible = false;
             }
+
+            obtainedText.Text = s.helloWorld();
         }
+
     }
 }

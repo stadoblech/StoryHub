@@ -23,6 +23,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTestProject", "QuickTe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWeb", "TestWeb\TestWeb.csproj", "{FE01EDC3-892E-4102-B8FA-8D9E4C7F4392}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StoryHub1", "..\StoryHub1\", "{75B7D68E-0A8A-49EE-AD22-34612C8607BF}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_17627"
+		Debug.AspNetCompiler.PhysicalPath = "..\StoryHub1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17627\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_17627"
+		Release.AspNetCompiler.PhysicalPath = "..\StoryHub1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17627\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "17627"
+		SlnRelativePath = "..\StoryHub1\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		StoryHub\StoryHub.Shared\StoryHub.Shared.projitems*{cc9ce502-f0ef-4c4e-ad55-ac693a3b1a99}*SharedItemsImports = 4
@@ -142,6 +164,22 @@ Global
 		{FE01EDC3-892E-4102-B8FA-8D9E4C7F4392}.Release|x64.Build.0 = Release|Any CPU
 		{FE01EDC3-892E-4102-B8FA-8D9E4C7F4392}.Release|x86.ActiveCfg = Release|Any CPU
 		{FE01EDC3-892E-4102-B8FA-8D9E4C7F4392}.Release|x86.Build.0 = Release|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|ARM.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|x64.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Debug|x86.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|ARM.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|x64.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|x64.Build.0 = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|x86.ActiveCfg = Debug|Any CPU
+		{75B7D68E-0A8A-49EE-AD22-34612C8607BF}.Release|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
