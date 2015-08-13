@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="StoryHubWCFApp.JSS" CodeBehind="JSS.svc.cs" %>

@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="GetSimpleDataService.svc" />
+    <Content Include="JSS.svc" />
     <Content Include="TestStudentService.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -80,6 +81,10 @@
       <DependentUpon>GetSimpleDataService.svc</DependentUpon>
     </Compile>
     <Compile Include="IGetSimpleDataService.cs" />
+    <Compile Include="IJSS.cs" />
+    <Compile Include="JSS.svc.cs">
+      <DependentUpon>JSS.svc</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="TestStudentService.svc.cs">
       <DependentUpon>TestStudentService.svc</DependentUpon>

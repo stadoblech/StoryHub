@@ -29,6 +29,11 @@ namespace StoryHubWCFApp
             return queryForUser(ID);
         }
 
+        public string WebMethodTest()
+        {
+            return "WebMethod attribute is the right thing!";
+        }
+
         private User queryForUser(string ID)
         {
             DatabaseConnector.Connect();

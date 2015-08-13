@@ -7,6 +7,7 @@ using System.Text;
 using StoryHub.DAL.Model;
 using System.ServiceModel.Web;
 using System.Web.Script.Services;
+using System.Web.Services;
 
 namespace StoryHubWCFApp
 {
@@ -24,6 +25,10 @@ namespace StoryHubWCFApp
         [OperationContract]
         [WebGet]
         string ActivationTest();
+
+        [OperationContract]
+        [WebMethod]
+        string WebMethodTest();
 
     }
 }
