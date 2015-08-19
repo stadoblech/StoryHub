@@ -18,14 +18,24 @@ public class AuthorizationService : IAuthorizationService
         throw new NotImplementedException();
     }
 
+    /// <summary>
+    /// Method for e-mail verification. Will return tuple with result string and result bool value.
+    /// If e-mail is in the database, method will return true.
+    /// If e-mail is not in the database, method will return false. 
+    /// </summary>
+    /// <param name="email">Virtualy both user's login name and contact e-mail address.</param>
+    /// <returns></returns>
     public Tuple<string, bool> VerifyEmail(string email)
     {
-        var a = new AuthorizationLinqDataContext();
-        var b = new User();
-        if (b.Email == email)
-            return new Tuple<string, bool>("Email is in the database.", true);          //email is in the database
+        AuthorizationLinqDataContext database = new AuthorizationLinqDataContext();
+        var result = from u in database.Users
+                     where u.Email == email
+                     select u;
+
+        if (result.Count() > 0)
+            return new Tuple<string, bool>("Email is in the database.", true);          
         else
-            return new Tuple<string, bool>("Email is not in the database.", false);     //email is not in the database
+            return new Tuple<string, bool>("Email is not in the database.", false);     
     }
 
     public Tuple<string, bool> VerifyPassword(string email, string password)

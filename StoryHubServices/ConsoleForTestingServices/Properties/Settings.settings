@@ -5,5 +5,8 @@
     <Setting Name="ConsoleForTestingServices_ServiceAuthorization_AuthorizationService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:53706/AuthorizationService.svc</Value>
     </Setting>
+    <Setting Name="ConsoleForTestingServices_ServiceTest_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.h1002584.qshapps.net/Service.svc</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

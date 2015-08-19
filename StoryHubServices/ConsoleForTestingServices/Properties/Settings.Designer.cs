@@ -32,5 +32,15 @@ namespace ConsoleForTestingServices.Properties {
                 return ((string)(this["ConsoleForTestingServices_ServiceAuthorization_AuthorizationService"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.h1002584.qshapps.net/Service.svc")]
+        public string ConsoleForTestingServices_ServiceTest_Service {
+            get {
+                return ((string)(this["ConsoleForTestingServices_ServiceTest_Service"]));
+            }
+        }
     }
 }

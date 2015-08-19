@@ -12,8 +12,7 @@ namespace StoryHubWCFApp
     [ServiceContract]    
     public interface IJSS
     {
-        [OperationContract]
-        [WebGet(UriTemplate = "User/{ID}")]
-        User
+        //[OperationContract]
+        //[WebGet(UriTemplate = "User/{ID}")]
     }
 }

@@ -59,7 +59,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Web References\ServiceAuthorization\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServiceTest\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -84,6 +94,19 @@
     <None Include="Service References\ServiceReference1\AuthorizationService3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference2\ConsoleForTestingServices.ServiceReference2.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference2\Service.wsdl" />
+    <None Include="Service References\ServiceReference2\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference2\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\ServiceAuthorization\AuthorizationService.wsdl" />
     <None Include="Web References\ServiceAuthorization\AuthorizationService.xsd">
       <SubType>Designer</SubType>
@@ -104,6 +127,23 @@
     <None Include="Web References\ServiceAuthorization\TupleOfstringboolean.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\ServiceTest\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServiceTest\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServiceTest\Service.wsdl" />
+    <None Include="Web References\ServiceTest\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ServiceTest\Service0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\ServiceTest\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
@@ -123,12 +163,24 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>ConsoleForTestingServices_ServiceAuthorization_AuthorizationService</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.h1002584.qshapps.net/Service.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServiceTest\</RelPath>
+      <UpdateFromURL>http://www.h1002584.qshapps.net/Service.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ConsoleForTestingServices_ServiceTest_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\ServiceAuthorization\AuthorizationService.disco" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference1\AuthorizationService.disco" />
@@ -141,6 +193,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ServiceTest\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference2\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference2\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
