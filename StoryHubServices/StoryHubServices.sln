@@ -23,6 +23,12 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StoryHub1", "StoryHub1\", "
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "53706"
+		SlnRelativePath = "StoryHub1\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleForTestingServices", "ConsoleForTestingServices\ConsoleForTestingServices.csproj", "{D1641C79-441A-4FB0-86F8-8B46FF4E4CA6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{97C01B08-DD49-4E34-84E1-DFFB32C7E53B} = {97C01B08-DD49-4E34-84E1-DFFB32C7E53B}
 	EndProjectSection
 EndProject
 Global
@@ -39,6 +45,10 @@ Global
 		{97C01B08-DD49-4E34-84E1-DFFB32C7E53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97C01B08-DD49-4E34-84E1-DFFB32C7E53B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{97C01B08-DD49-4E34-84E1-DFFB32C7E53B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D1641C79-441A-4FB0-86F8-8B46FF4E4CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1641C79-441A-4FB0-86F8-8B46FF4E4CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1641C79-441A-4FB0-86F8-8B46FF4E4CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1641C79-441A-4FB0-86F8-8B46FF4E4CA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
