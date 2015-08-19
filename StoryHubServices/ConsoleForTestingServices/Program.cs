@@ -10,14 +10,14 @@ namespace ConsoleForTestingServices
     {
         static void Main(string[] args)
         {
-            var a = new ServiceReference2.ServiceClient();
-            //Console.WriteLine(a.helloWorld());
-            var b = new ServiceReference1.AuthorizationServiceClient();
-            //Console.WriteLine(b.VerifyEmail("snek@gmail.com").Item1);
             var c = new ServiceAuthorization.AuthorizationService();
-            Console.WriteLine(c.VerifyEmail("grandys@seznam.cz").m_Item1);
-            var d = new ServiceTest.Service();
-            Console.WriteLine(d.helloWorld());
+            //Console.WriteLine(c.VerifyEmail("grandys@seznam.cz").m_Item1);
+
+            Console.WriteLine(c.VerifyPassword("snek@gmail.com", "heslo").m_Item1); //spravne prihlasovaci udaje
+            Console.WriteLine(c.VerifyPassword("snek@gmhail.com", "heslo").m_Item1);  //nespravny mail
+            Console.WriteLine(c.VerifyPassword("snek@gmail.com", "hesjlo").m_Item1); //nespravne heslo
+            Console.WriteLine(c.VerifyPassword("snek@gmkail.com", "hekslo").m_Item1);  //nespravny mail a heslo
+
             Console.ReadKey();
         }
     }

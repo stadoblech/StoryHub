@@ -40,6 +40,16 @@ public class AuthorizationService : IAuthorizationService
 
     public Tuple<string, bool> VerifyPassword(string email, string password)
     {
-        throw new NotImplementedException();
+        AuthorizationLinqDataContext database = new AuthorizationLinqDataContext();
+        var result = from u in database.Users
+                     where u.Email == email
+                     select u;
+
+        if (result.Count() == 0)
+            return new Tuple<string, bool>("This e-mail is not in the database.", false);
+        if (result.First().Password == password)
+            return new Tuple<string, bool>("Welcome back", true);
+        else
+            return new Tuple<string, bool>("This password is not correct.", false);
     }
 }
