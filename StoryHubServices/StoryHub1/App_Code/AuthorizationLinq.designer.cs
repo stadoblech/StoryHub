@@ -29,6 +29,9 @@ public partial class AuthorizationLinqDataContext : System.Data.Linq.DataContext
 	
   #region Extensibility Method Definitions
   partial void OnCreated();
+  partial void InsertUser(User instance);
+  partial void UpdateUser(User instance);
+  partial void DeleteUser(User instance);
   #endregion
 	
 	public AuthorizationLinqDataContext() : 
@@ -71,8 +74,10 @@ public partial class AuthorizationLinqDataContext : System.Data.Linq.DataContext
 }
 
 [global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Users")]
-public partial class User
+public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 {
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
 	private string _Email;
 	
@@ -90,11 +95,34 @@ public partial class User
 	
 	private string _UiDesign;
 	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnPasswordChanging(string value);
+    partial void OnPasswordChanged();
+    partial void OnActivatedChanging(bool value);
+    partial void OnActivatedChanged();
+    partial void OnWantsNewsChanging(bool value);
+    partial void OnWantsNewsChanged();
+    partial void OnAppLanguageChanging(string value);
+    partial void OnAppLanguageChanged();
+    partial void OnUseLiveTileChanging(bool value);
+    partial void OnUseLiveTileChanged();
+    partial void OnHasNewContentChanging(bool value);
+    partial void OnHasNewContentChanged();
+    partial void OnUiDesignChanging(string value);
+    partial void OnUiDesignChanged();
+    #endregion
+	
 	public User()
 	{
+		OnCreated();
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(120) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(120) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 	public string Email
 	{
 		get
@@ -105,7 +133,11 @@ public partial class User
 		{
 			if ((this._Email != value))
 			{
+				this.OnEmailChanging(value);
+				this.SendPropertyChanging();
 				this._Email = value;
+				this.SendPropertyChanged("Email");
+				this.OnEmailChanged();
 			}
 		}
 	}
@@ -121,7 +153,11 @@ public partial class User
 		{
 			if ((this._Password != value))
 			{
+				this.OnPasswordChanging(value);
+				this.SendPropertyChanging();
 				this._Password = value;
+				this.SendPropertyChanged("Password");
+				this.OnPasswordChanged();
 			}
 		}
 	}
@@ -137,7 +173,11 @@ public partial class User
 		{
 			if ((this._Activated != value))
 			{
+				this.OnActivatedChanging(value);
+				this.SendPropertyChanging();
 				this._Activated = value;
+				this.SendPropertyChanged("Activated");
+				this.OnActivatedChanged();
 			}
 		}
 	}
@@ -153,7 +193,11 @@ public partial class User
 		{
 			if ((this._WantsNews != value))
 			{
+				this.OnWantsNewsChanging(value);
+				this.SendPropertyChanging();
 				this._WantsNews = value;
+				this.SendPropertyChanged("WantsNews");
+				this.OnWantsNewsChanged();
 			}
 		}
 	}
@@ -169,7 +213,11 @@ public partial class User
 		{
 			if ((this._AppLanguage != value))
 			{
+				this.OnAppLanguageChanging(value);
+				this.SendPropertyChanging();
 				this._AppLanguage = value;
+				this.SendPropertyChanged("AppLanguage");
+				this.OnAppLanguageChanged();
 			}
 		}
 	}
@@ -185,7 +233,11 @@ public partial class User
 		{
 			if ((this._UseLiveTile != value))
 			{
+				this.OnUseLiveTileChanging(value);
+				this.SendPropertyChanging();
 				this._UseLiveTile = value;
+				this.SendPropertyChanged("UseLiveTile");
+				this.OnUseLiveTileChanged();
 			}
 		}
 	}
@@ -201,12 +253,16 @@ public partial class User
 		{
 			if ((this._HasNewContent != value))
 			{
+				this.OnHasNewContentChanging(value);
+				this.SendPropertyChanging();
 				this._HasNewContent = value;
+				this.SendPropertyChanged("HasNewContent");
+				this.OnHasNewContentChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UiDesign", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UiDesign", DbType="VarChar(50) NOT NULL")]
 	public string UiDesign
 	{
 		get
@@ -217,8 +273,32 @@ public partial class User
 		{
 			if ((this._UiDesign != value))
 			{
+				this.OnUiDesignChanging(value);
+				this.SendPropertyChanging();
 				this._UiDesign = value;
+				this.SendPropertyChanged("UiDesign");
+				this.OnUiDesignChanged();
 			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 		}
 	}
 }
