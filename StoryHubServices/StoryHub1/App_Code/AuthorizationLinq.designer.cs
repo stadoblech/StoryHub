@@ -95,6 +95,8 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 	
 	private string _UiDesign;
 	
+	private string _StoriesLanguages;
+	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -115,6 +117,8 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnHasNewContentChanged();
     partial void OnUiDesignChanging(string value);
     partial void OnUiDesignChanged();
+    partial void OnStoriesLanguagesChanging(string value);
+    partial void OnStoriesLanguagesChanged();
     #endregion
 	
 	public User()
@@ -262,7 +266,7 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UiDesign", DbType="VarChar(50) NOT NULL")]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UiDesign", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
 	public string UiDesign
 	{
 		get
@@ -278,6 +282,26 @@ public partial class User : INotifyPropertyChanging, INotifyPropertyChanged
 				this._UiDesign = value;
 				this.SendPropertyChanged("UiDesign");
 				this.OnUiDesignChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StoriesLanguages", DbType="VarChar(1000) NOT NULL", CanBeNull=false)]
+	public string StoriesLanguages
+	{
+		get
+		{
+			return this._StoriesLanguages;
+		}
+		set
+		{
+			if ((this._StoriesLanguages != value))
+			{
+				this.OnStoriesLanguagesChanging(value);
+				this.SendPropertyChanging();
+				this._StoriesLanguages = value;
+				this.SendPropertyChanged("StoriesLanguages");
+				this.OnStoriesLanguagesChanged();
 			}
 		}
 	}

@@ -17,10 +17,14 @@ public class AuthorizationService : IAuthorizationService
             WantsNews = news,
             AppLanguage = appLanguage,
             UseLiveTile = useLiveTile,
-            Activated = false,
-            HasNewContent = false,
-            UiDesign = "default"            
+            Activated = true,
+            HasNewContent = true,
+            UiDesign = "default"                        
         };
+        foreach (var language in contentLanguages)
+        {
+            user.StoriesLanguages += language;
+        }
 
         database.Users.InsertOnSubmit(user);
 

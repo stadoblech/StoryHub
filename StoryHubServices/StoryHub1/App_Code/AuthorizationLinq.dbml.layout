@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AuthorizationLinq">
   <DataContextMoniker Name="/AuthorizationLinqDataContext" />
   <nestedChildShapes>
-    <classShape Id="912fa703-ba99-4eee-a15e-0ed1fa9c4795" absoluteBounds="4.5, 0.875, 2, 2.3478011067708335">
+    <classShape Id="f79ea69d-b476-477a-9d23-f4fff1e900bc" absoluteBounds="2.625, 1.125, 2, 2.5401025390625">
       <DataClassMoniker Name="/AuthorizationLinqDataContext/User" />
       <nestedChildShapes>
-        <elementListCompartment Id="ad7f8939-3b53-484c-ada5-f59a8c9d27f6" absoluteBounds="4.515, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b1354985-1faf-43da-8268-8f9da3c023c9" absoluteBounds="2.6399999999999997, 1.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

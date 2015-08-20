@@ -9,7 +9,8 @@
       <Column Name="AppLanguage" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="UseLiveTile" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="HasNewContent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="UiDesign" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="true" />
+      <Column Name="UiDesign" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StoriesLanguages" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>
