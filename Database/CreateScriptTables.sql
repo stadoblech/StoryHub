@@ -4,7 +4,7 @@ go
 
 /*
 Created: 12.08.2015
-Modified: 12.08.2015
+Modified: 20.08.2015
 Model: Clean model
 Database: MS SQL Server 2014
 */
@@ -23,13 +23,15 @@ CREATE TABLE [Users]
  [AppLanguage] Varchar(50) DEFAULT 'en_US' NOT NULL,
  [UseLiveTile] Bit DEFAULT 1 NOT NULL,
  [HasNewContent] Bit DEFAULT 1 NOT NULL,
- [UiDesign] Varchar(50) DEFAULT 'Default' NOT NULL
+ [UiDesign] Varchar(50) DEFAULT 'DefaultDesign' NOT NULL,
+ [StoriesLanguages] Varchar(1000) DEFAULT 'All' NOT NULL
 )
 go
 
 -- Add keys for table Users
 
-ALTER TABLE [Users] ADD CONSTRAINT [Email] UNIQUE CLUSTERED ([Email])
+ALTER TABLE [Users] ADD CONSTRAINT [Key1] PRIMARY KEY ([Email])
 go
+
 
 
